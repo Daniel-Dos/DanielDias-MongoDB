@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,6 +18,9 @@
    Cidade: <input type="text" name="cidade"/><br /><br />
    Bairro: <input type="text" name="bairro"/><br /><br />
    Estado: <input type="text" name="estado"/><br /><br/>
+   Data de Nascimento: <br /><input type="text" name="dataFinalizacao" placeholder="dd/MM/yyyy"/>
+   
+  
    
    <input type="submit" value="Cadastrar Dados no MongoDB"/>
 
