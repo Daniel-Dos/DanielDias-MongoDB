@@ -1,7 +1,10 @@
 package br.com.danieldias.mongodb.modelo;
 
 import java.io.Serializable;
+import java.util.Calendar;
 import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * C
@@ -20,7 +23,9 @@ public class Pessoa implements Serializable {
 	private String cidade;
 	private String bairro;
 	private String estado;
-	private Date data;
+	
+	@DateTimeFormat(pattern="dd/MM/yyyy")
+	private Calendar data;
 	
 	//construtor sem argumentos
 	public Pessoa() {
@@ -28,7 +33,7 @@ public class Pessoa implements Serializable {
 	}
 	
 	//construtor
-	public Pessoa(String nome,int idade,String profissao,String endereco,String cidade,String bairro,String estado,Date data) {
+	public Pessoa(String nome,int idade,String profissao,String endereco,String cidade,String bairro,String estado,Calendar data) {
 		this.nome = nome;
 		this.idade = idade;
 		this.profissao = profissao;
@@ -96,11 +101,11 @@ public class Pessoa implements Serializable {
 		this.estado = estado;
 	}
 	
-	public Date getData() {
+	public Calendar getData() {
 		return data;
 	}
 	
-	public void setData(Date data) {
+	public void setData(Calendar data) {
 		this.data = data;
 	}
 	

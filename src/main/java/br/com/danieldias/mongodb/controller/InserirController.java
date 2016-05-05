@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.servlet.ServletException;
@@ -45,7 +46,10 @@ public class InserirController extends HttpServlet {
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		try {
 			Date data = formatter.parse(dataForm);
-			pessoa.setData(data);
+			Calendar cal = Calendar.getInstance();
+			cal.setTime(data);
+			pessoa.setData(cal);
+			
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -70,7 +74,7 @@ public class InserirController extends HttpServlet {
 				.append("Cidade", pessoa.getCidade())
 				.append("Bairro", pessoa.getBairro())
 				.append("Estado", pessoa.getEstado()) 
-				.append("Data", pessoa.getData()) );
+				.append("Data", pessoa.getData().getTime()) );
 		
 		PrintWriter saida  = response.getWriter();
 		
