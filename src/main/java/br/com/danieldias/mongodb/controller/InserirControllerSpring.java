@@ -1,5 +1,9 @@
 package br.com.danieldias.mongodb.controller;
 
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.util.Date;
+
 import org.bson.Document;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +30,10 @@ public class InserirControllerSpring {
 		//caso no exista, sera criado um Collection chamado Pessoas
 		MongoCollection<Document> collectionPessoas = dataBase.getCollection("Pessoas"); 
 		
+		
+		
+		
+		
 		// inserindo 
 		collectionPessoas.insertOne(
 				new Document("nome",pessoa.getNome())
@@ -35,7 +43,12 @@ public class InserirControllerSpring {
 				.append("Cidade", pessoa.getCidade())
 				.append("Bairro", pessoa.getBairro())
 				.append("Estado", pessoa.getEstado())
+<<<<<<< HEAD
 				.append("Data", pessoa.getDataFinalizacao().getTime()));
+=======
+				.append("Data de Nascimento", pessoa.getData().getTime())
+				);
+>>>>>>> 94f9db3238fbb742901ea86f3ee204fb221a244f
 		
 		return "ok";
 	}

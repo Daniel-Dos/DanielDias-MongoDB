@@ -18,7 +18,11 @@
    Cidade: <input type="text" name="cidade"/><br /><br />
    Bairro: <input type="text" name="bairro"/><br /><br />
    Estado: <input type="text" name="estado"/><br /><br/>
+<<<<<<< HEAD
    Data de Nascimento: <br /><input type="text" name="dataFinalizacao" placeholder="dd/MM/yyyy"/>
+=======
+   Data de Nascimento: <input type="text" name="data" placeholder="dd/mm/yyyy"/>
+>>>>>>> 94f9db3238fbb742901ea86f3ee204fb221a244f
    
   
    

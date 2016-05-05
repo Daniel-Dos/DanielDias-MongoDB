@@ -2,6 +2,10 @@ package br.com.danieldias.mongodb.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -38,6 +42,19 @@ public class InserirController extends HttpServlet {
 		pessoa.setBairro(request.getParameter("bairro"));
 		pessoa.setEstado(request.getParameter("estado"));
 		
+		String dataForm = request.getParameter("data");
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+		try {
+			Date data = formatter.parse(dataForm);
+			Calendar cal = Calendar.getInstance();
+			cal.setTime(data);
+			pessoa.setData(cal);
+			
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		/*Criando a conexao com o MongoDB*/
 		MongoClient conexao = new MongoClient(); //host = localhost e porta = 27017
 		
@@ -56,7 +73,8 @@ public class InserirController extends HttpServlet {
 				.append("Endereço", pessoa.getEndereco())
 				.append("Cidade", pessoa.getCidade())
 				.append("Bairro", pessoa.getBairro())
-				.append("Estado", pessoa.getEstado()) );
+				.append("Estado", pessoa.getEstado()) 
+				.append("Data", pessoa.getData().getTime()) );
 		
 		PrintWriter saida  = response.getWriter();
 		
