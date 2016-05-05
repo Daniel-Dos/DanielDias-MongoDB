@@ -1,6 +1,7 @@
 package br.com.danieldias.mongodb.modelo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * C
@@ -19,6 +20,7 @@ public class Pessoa implements Serializable {
 	private String cidade;
 	private String bairro;
 	private String estado;
+	private Date data;
 	
 	//construtor sem argumentos
 	public Pessoa() {
@@ -26,7 +28,7 @@ public class Pessoa implements Serializable {
 	}
 	
 	//construtor
-	public Pessoa(String nome,int idade,String profissao,String endereco,String cidade,String bairro,String estado) {
+	public Pessoa(String nome,int idade,String profissao,String endereco,String cidade,String bairro,String estado,Date data) {
 		this.nome = nome;
 		this.idade = idade;
 		this.profissao = profissao;
@@ -34,6 +36,7 @@ public class Pessoa implements Serializable {
 		this.cidade = cidade;
 		this.bairro = bairro;
 		this.estado = estado;
+		this.data = data;
 	}
 
 	// Gets e Sets
@@ -93,8 +96,13 @@ public class Pessoa implements Serializable {
 		this.estado = estado;
 	}
 	
+	public Date getData() {
+		return data;
+	}
 	
-	
+	public void setData(Date data) {
+		this.data = data;
+	}
 	
 
 }

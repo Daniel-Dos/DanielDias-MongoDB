@@ -18,6 +18,8 @@
    Bairro: <input type="text" name="bairro"/><br /><br />
    Estado: <input type="text" name="estado"/><br /><br/>
    
+  
+   
    <input type="submit" value="Cadastrar Dados no MongoDB"/>
 
 
