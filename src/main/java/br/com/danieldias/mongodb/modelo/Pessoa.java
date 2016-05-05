@@ -2,10 +2,6 @@ package br.com.danieldias.mongodb.modelo;
 
 import java.io.Serializable;
 import java.util.Calendar;
-<<<<<<< HEAD
-=======
-import java.util.Date;
->>>>>>> 94f9db3238fbb742901ea86f3ee204fb221a244f
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -28,11 +24,8 @@ public class Pessoa implements Serializable {
 	private String estado;
 	
 	@DateTimeFormat(pattern="dd/MM/yyyy")
-<<<<<<< HEAD
-	private Calendar dataFinalizacao;
-=======
 	private Calendar data;
->>>>>>> 94f9db3238fbb742901ea86f3ee204fb221a244f
+
 	
 	//construtor sem argumentos
 	public Pessoa() {
@@ -40,11 +33,8 @@ public class Pessoa implements Serializable {
 	}
 	
 	//construtor
-<<<<<<< HEAD
-	public Pessoa(String nome,int idade,String profissao,String endereco,String cidade,String bairro,String estado,Calendar dataFinalizacao) {
-=======
+
 	public Pessoa(String nome,int idade,String profissao,String endereco,String cidade,String bairro,String estado,Calendar data) {
->>>>>>> 94f9db3238fbb742901ea86f3ee204fb221a244f
 		this.nome = nome;
 		this.idade = idade;
 		this.profissao = profissao;
@@ -52,11 +42,7 @@ public class Pessoa implements Serializable {
 		this.cidade = cidade;
 		this.bairro = bairro;
 		this.estado = estado;
-<<<<<<< HEAD
-		this.dataFinalizacao = dataFinalizacao;
-=======
 		this.data = data;
->>>>>>> 94f9db3238fbb742901ea86f3ee204fb221a244f
 	}
 
 	// Gets e Sets
@@ -120,17 +106,8 @@ public class Pessoa implements Serializable {
 		return data;
 	}
 	
-<<<<<<< HEAD
-	public Calendar getDataFinalizacao() {
-		return dataFinalizacao;
-	}
-	
-	public void setDataFinalizacao(Calendar dataFinalizacao) {
-		this.dataFinalizacao = dataFinalizacao;
-=======
 	public void setData(Calendar data) {
 		this.data = data;
->>>>>>> 94f9db3238fbb742901ea86f3ee204fb221a244f
 	}
 	
 

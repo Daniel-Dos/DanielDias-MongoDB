@@ -43,13 +43,8 @@ public class InserirControllerSpring {
 				.append("Cidade", pessoa.getCidade())
 				.append("Bairro", pessoa.getBairro())
 				.append("Estado", pessoa.getEstado())
-<<<<<<< HEAD
-				.append("Data", pessoa.getDataFinalizacao().getTime()));
-=======
 				.append("Data de Nascimento", pessoa.getData().getTime())
 				);
->>>>>>> 94f9db3238fbb742901ea86f3ee204fb221a244f
-		
 		return "ok";
 	}
 	
