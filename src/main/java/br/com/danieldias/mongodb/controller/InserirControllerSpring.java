@@ -1,31 +1,28 @@
 package br.com.danieldias.mongodb.controller;
 
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
-import java.util.Date;
-import java.util.List;
-
 import org.bson.Document;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.mongodb.Block;
-import com.mongodb.DBCursor;
 import com.mongodb.MongoClient;
-import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 
 import br.com.danieldias.mongodb.modelo.Pessoa;
 
 @Controller
+@RequestMapping("pessoa")
 public class InserirControllerSpring {
 	
 	
+	@RequestMapping(value ="/InserirSpring.html", method= RequestMethod.GET)
+	public ModelAndView Cadastrar(){
+		
+		return new ModelAndView("InserirSpring");
+	}
 	
 	@RequestMapping("InserirSpring")
 	public String adiciona(Pessoa pessoa) {

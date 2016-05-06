@@ -11,6 +11,8 @@
 </head>
 <body>
  
+ <h1><a href="https://github.com/Daniel-Dos/DanielDias-MongoDB">GitHub - DanielDias-Mongo</a></h1>
+ 
  <h1 align="center">Listagem dos Dados</h1>
 
 	<table align="center" border="4">
@@ -42,6 +44,12 @@
 		</c:forEach>
 	</table>
 
+<br /><br />
+<footer id="footer">
+            <ul style="list-style: none;" align="center">
+            <li>Copyright &copy; Daniel Dias dos Santos 2016</li>
+           </ul>
+        </footer>
 
 </body>
 </html>
