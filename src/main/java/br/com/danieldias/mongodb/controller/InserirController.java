@@ -85,6 +85,8 @@ public class InserirController extends HttpServlet {
 		saida.println("<h1>Os Dados Foram Inseridos com Sucesso no MongoDB na <br />DataBASE "+ dataBase.getName() +"<br /> e na Coleção " 
 		+ collectionPessoas.getNamespace().getCollectionName() +" !</h1>");
 		
+		String inserir="Inserir.jsp";
+		saida.println("<a href="+inserir+">Index</a>");
 		;
 		
 	}
