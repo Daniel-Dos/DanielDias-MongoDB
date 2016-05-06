@@ -10,8 +10,8 @@
 <body>
 
 
-<h1>Os Dados Foram Inseridos com Sucesso no MongoDB utilizando o SpringMVC</h1>
+<h1>Os Dados Foram Inseridos com Sucesso no MongoDB utilizando o SpringMVC!</h1>
 
- 
+ <a href="listagem">lista</a>
 </body>
 </html>

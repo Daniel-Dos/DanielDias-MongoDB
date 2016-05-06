@@ -74,7 +74,7 @@ public class InserirController extends HttpServlet {
 				.append("Cidade", pessoa.getCidade())
 				.append("Bairro", pessoa.getBairro())
 				.append("Estado", pessoa.getEstado()) 
-				.append("Data", pessoa.getData().getTime()) );
+				.append("Nascimento", pessoa.getData().getTime()) );
 		
 		PrintWriter saida  = response.getWriter();
 		

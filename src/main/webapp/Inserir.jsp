@@ -17,7 +17,7 @@
    Cidade: <input type="text" name="cidade"/><br /><br />
    Bairro: <input type="text" name="bairro"/><br /><br />
    Estado: <input type="text" name="estado"/><br /><br/>
-   daa:<input type="date" name="data"/>
+   Data de Nascimento:<input type="date" name="data"/>
    
    <input type="submit" value="Cadastrar Dados no MongoDB"/>
 
