@@ -9,6 +9,8 @@
 </head>
 <body>
 
+<div align="center">
+<img alt="MongoDB" src="../recursos/imagens/mongodb_slide.png" height="150" align="middle">
 <h1><a href="https://github.com/Daniel-Dos/DanielDias-MongoDB">GitHub - DanielDias-Mongo</a></h1>
 
 <form action="InserirSpring" method="post">
@@ -20,7 +22,7 @@
    Cidade: <input type="text" name="cidade"/><br /><br />
    Bairro: <input type="text" name="bairro"/><br /><br />
    Estado: <input type="text" name="estado"/><br /><br/>
-   Data de Nascimento: <input type="text" name="data" placeholder="dd/mm/yyyy"/>
+   Data de Nascimento: <input type="text" name="data" placeholder="dd/mm/yyyy"/><br /><br />
    
    <input type="submit" value="Cadastrar Dados no MongoDB"/>
    
@@ -28,6 +30,7 @@
 
 </form>
 
+</div>
 <br /><br />
 <footer id="footer">
             <ul style="list-style: none;" align="center">

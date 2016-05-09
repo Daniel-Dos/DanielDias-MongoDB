@@ -10,6 +10,9 @@
 </head>
 <body>
 
+<img src="recursos/imagens/mongoDB.png"/>
+<br /><br />
+
 <form action="InserirController" method="post">
 
    Nome: <input type="text" name="nome"/><br /><br />

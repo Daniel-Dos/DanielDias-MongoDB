@@ -8,15 +8,19 @@
 </head>
 <body>
 
+<div align="center"><img src="recursos/imagens/mongoDB.png" align="middle"/>
+<br /><br />
+
 <h1><a href="https://github.com/Daniel-Dos/DanielDias-MongoDB">GitHub - DanielDias-Mongo</a></h1>
 
 <h2>MongoDB Utilizando o Spring</h2>
-<ul style="list-style-type:square">
+<ul style="list-style-type:none">
   <li><a href="pessoa/InserirSpring.html">Cadastrar</a></li>
   <li><a href="pessoa/listagem">Consultar</a></li>
    
 </ul>
 
+</div>
 <br /><br />
 <footer id="footer">
             <ul style="list-style: none;" align="center">

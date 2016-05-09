@@ -11,8 +11,13 @@
 </head>
 <body>
  
- <h1><a href="https://github.com/Daniel-Dos/DanielDias-MongoDB">GitHub - DanielDias-Mongo</a></h1>
  
+ <br />
+ <div align="center"><img src="../recursos/imagens/monodb.jpg" height="250" align="middle"/>
+<br /><br />
+
+<h1><a href="https://github.com/Daniel-Dos/DanielDias-MongoDB">GitHub - DanielDias-Mongo</a></h1>
+
  <h1 align="center">Listagem dos Dados</h1>
 
 	<table align="center" border="4">
@@ -43,7 +48,7 @@
 			</tr>
 		</c:forEach>
 	</table>
-
+</div>
 <br /><br />
 <footer id="footer">
             <ul style="list-style: none;" align="center">

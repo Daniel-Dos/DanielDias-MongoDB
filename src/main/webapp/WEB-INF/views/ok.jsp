@@ -9,14 +9,18 @@
 </head>
 <body>
 
+
+<div align="center">
+<img alt="MongoDB" src="../recursos/imagens/mongodb_slide.png" height="150" align="middle">
 <h1><a href="https://github.com/Daniel-Dos/DanielDias-MongoDB">GitHub - DanielDias-Mongo</a></h1>
 
 <h1>Os Dados Foram Inseridos com Sucesso no MongoDB utilizando o SpringMVC!</h1>
 
  <a href="listagem">lista</a>
  
- 
+ </div>
  <br /><br />
+ 
 <footer id="footer">
             <ul style="list-style: none;" align="center">
             <li>Copyright &copy; Daniel Dias dos Santos 2016</li>
