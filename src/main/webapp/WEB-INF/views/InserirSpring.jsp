@@ -10,7 +10,7 @@
 <body>
 
 <div align="center">
-<img alt="MongoDB" src="../recursos/imagens/mongodb_slide.png" height="150" align="middle">
+<img alt="MongoDB" src="../recursos/imagens/mongodb-logo.png" height="150" align="middle">
 <h1><a href="https://github.com/Daniel-Dos/DanielDias-MongoDB">GitHub - DanielDias-Mongo</a></h1>
 
 <form action="InserirSpring" method="post">

@@ -11,7 +11,7 @@
 
 
 <div align="center">
-<img alt="MongoDB" src="../recursos/imagens/mongodb_slide.png" height="150" align="middle">
+<img alt="MongoDB" src="../recursos/imagens/mongoDB.png" height="150" align="middle">
 <h1><a href="https://github.com/Daniel-Dos/DanielDias-MongoDB">GitHub - DanielDias-Mongo</a></h1>
 
 <h1>Os Dados Foram Inseridos com Sucesso no MongoDB utilizando o SpringMVC!</h1>
