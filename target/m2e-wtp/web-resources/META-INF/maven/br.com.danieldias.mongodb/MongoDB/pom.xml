@@ -5,14 +5,20 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
   
+  <dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.hibernate.ogm</groupId>
+            <artifactId>hibernate-ogm-bom</artifactId>
+            <version>5.0.0.Final</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+  
   <!-- Driver para Trabalhar com Java -->
   <dependencies>
-    <dependency>
-        <groupId>org.mongodb</groupId>
-        <artifactId>mongodb-driver</artifactId>
-        <version>3.2.2</version>
-    </dependency>
-    
     <dependency>
 	<groupId>jstl</groupId>
 	<artifactId>jstl</artifactId>
@@ -26,7 +32,10 @@
   <version>4.2.5.RELEASE</version>
     </dependency>
     
-    
+      <dependency>
+ <groupId>org.hibernate.ogm</groupId>
+ <artifactId>hibernate-ogm-mongodb</artifactId>
+ </dependency>
     
 </dependencies>
   

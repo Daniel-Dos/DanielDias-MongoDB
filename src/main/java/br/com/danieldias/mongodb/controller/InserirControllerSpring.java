@@ -27,6 +27,7 @@ public class InserirControllerSpring {
 	@RequestMapping("InserirSpring")
 	public String adiciona(Pessoa pessoa) {
 		
+		/*
 		/*Criando a conexao com o MongoDB*/
 		MongoClient conexao = new MongoClient(); //host = localhost e porta = 27017
 		
