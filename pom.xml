@@ -69,6 +69,14 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<resources> 
+    <resource> 
+        <directory> src </directory> 
+        <includes> 
+            <include>META-INF/persistence.xml </include> 
+        </includes> 
+    </resource> 
+</resources>
 	</build>
   
 </project>
