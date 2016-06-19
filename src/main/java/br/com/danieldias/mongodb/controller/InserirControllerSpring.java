@@ -1,5 +1,7 @@
 package br.com.danieldias.mongodb.controller;
 
+import static com.mongodb.client.model.Filters.eq;
+
 import org.bson.Document;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.result.UpdateResult;
 
 import br.com.danieldias.mongodb.modelo.Pessoa;
 
@@ -22,6 +25,11 @@ public class InserirControllerSpring {
 	public ModelAndView Cadastrar(){
 		
 		return new ModelAndView("InserirSpring");
+	}
+	
+	@RequestMapping(value ="/AlterarSpring.html", method= RequestMethod.GET)
+	public ModelAndView Alterar() {
+		return new ModelAndView("AlterarSpring");
 	}
 	
 	@RequestMapping("InserirSpring")
@@ -64,6 +72,27 @@ public class InserirControllerSpring {
 		model.addAttribute("listas", collectionPessoas.find().iterator());
 		
 		return "lista";
+	}
+	
+	// Atualizando
+	@RequestMapping("alterar")
+	public String update(Pessoa pessoa) {
+		
+		MongoClient conexao = new MongoClient();
+		MongoDatabase dataBase = conexao.getDatabase("OmegaWare");
+		MongoCollection<Document> collectionPessoas = dataBase.getCollection("Pessoas");
+		
+		UpdateResult update = collectionPessoas.updateOne(eq("nome",pessoa.getNome()), 
+				new Document("$set",
+						new Document("Idade",pessoa.getIdade())
+						.append("Profissão", pessoa.getProfissao())
+						.append("Endereço", pessoa.getEndereco())
+						.append("Cidade", pessoa.getCidade())
+						.append("Bairro", pessoa.getBairro())
+						.append("Estado", pessoa.getEstado())
+						)
+				);
+		return "ok3";
 	}
 
 }
