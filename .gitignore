@@ -1,10 +1,5 @@
 *.class
 
-*.classpath
-*.project
-*.tern-project
-*.gitignore
-
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
