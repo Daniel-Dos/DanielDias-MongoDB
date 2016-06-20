@@ -12,6 +12,7 @@
 .classpath
 .project
 .tern-project
+.springBeans
 .settings/
 target/
 
