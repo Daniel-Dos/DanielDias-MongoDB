@@ -32,7 +32,7 @@ public class InserirControllerSpring {
 		return new ModelAndView("AlterarSpring");
 	}
 	
-	@RequestMapping("InserirSpring")
+	@RequestMapping(value="InserirSpring",method= RequestMethod.POST)
 	public String adiciona(Pessoa pessoa) {
 		
 		/*
@@ -62,7 +62,7 @@ public class InserirControllerSpring {
 	}
 	
 	// Listando Tudo
-	@RequestMapping("listagem")
+	@RequestMapping(value="listagem",method= RequestMethod.GET)
 	public String lista(Model model) {
 		
 		MongoClient conexao = new MongoClient();
@@ -75,7 +75,7 @@ public class InserirControllerSpring {
 	}
 	
 	// Atualizando
-	@RequestMapping("alterar")
+	@RequestMapping(value="alterar",method=RequestMethod.POST)
 	public String update(Pessoa pessoa) {
 		
 		MongoClient conexao = new MongoClient();
