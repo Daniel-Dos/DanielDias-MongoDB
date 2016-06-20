@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.result.DeleteResult;
 import com.mongodb.client.result.UpdateResult;
 
 import br.com.danieldias.mongodb.modelo.Pessoa;
@@ -30,6 +31,11 @@ public class InserirControllerSpring {
 	@RequestMapping(value ="/AlterarSpring.html", method= RequestMethod.GET)
 	public ModelAndView Alterar() {
 		return new ModelAndView("AlterarSpring");
+	}
+	
+	@RequestMapping(value="/RemoverSpring.html",method=RequestMethod.GET)
+	public ModelAndView Remover() {
+		return new ModelAndView("RemoverSpring");
 	}
 	
 	@RequestMapping(value="InserirSpring",method= RequestMethod.POST)
@@ -93,6 +99,18 @@ public class InserirControllerSpring {
 						)
 				);
 		return "ok3";
+	}
+	// Removendo
+	@RequestMapping(value="remover",method=RequestMethod.GET)
+	public String deletar(Pessoa pessoa) {
+		
+		MongoClient conexao = new MongoClient();
+		MongoDatabase dataBase = conexao.getDatabase("OmegaWare");
+		MongoCollection<Document> collectionPessoas = dataBase.getCollection("Pessoas");
+		
+		DeleteResult deletar = collectionPessoas.deleteOne(eq("nome",pessoa.getNome()));
+		
+		return "ok4";
 	}
 
 }

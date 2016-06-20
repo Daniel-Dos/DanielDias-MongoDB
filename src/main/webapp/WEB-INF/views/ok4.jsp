@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Alternando com SpringMVC</title>
+<title>Deletando com SpringMVC</title>
 </head>
 <body>
 
@@ -14,7 +14,7 @@
 <img alt="MongoDB" src="../recursos/imagens/mongoDB.png" height="150" align="middle">
 <h1><a href="https://github.com/Daniel-Dos/DanielDias-MongoDB">GitHub - DanielDias-Mongo</a></h1>
 
-<h1>Os Dados Foram Atualizados com Sucesso no MongoDB utilizando o SpringMVC!</h1>
+<h1>Os Dados de ${pessoa.nome}, Foram Excluidos com Sucesso no MongoDB utilizando o SpringMVC!</h1>
 
  <a href="listagem">lista</a>
  

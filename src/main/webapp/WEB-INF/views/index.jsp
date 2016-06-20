@@ -18,6 +18,7 @@
   <li><a href="pessoa/InserirSpring.html">Cadastrar</a></li>
   <li><a href="pessoa/listagem">Consultar</a></li>
    <li><a href="pessoa/AlterarSpring.html">Alterar</a></li>
+   <li><a href="pessoa/RemoverSpring.html">Remover</a></li>
    <li><a href="pessoaHibernateSpring/InserirSpringHibernate.html">Cadastrar - Hibernate com Spring</a></li>
    
 </ul>
