@@ -2,6 +2,7 @@ package br.com.danieldias.mongodb.modelo;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -34,6 +35,7 @@ public class PessoaHibernate {
 	
 	@DateTimeFormat(pattern="dd/MM/yyyy")
 	@Temporal(TemporalType.DATE)
+	@Column(name = "nascimento")
 	private Date data;
 
 	

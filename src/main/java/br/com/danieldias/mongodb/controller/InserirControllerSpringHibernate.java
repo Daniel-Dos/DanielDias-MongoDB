@@ -4,6 +4,7 @@ import java.sql.SQLException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -27,6 +28,16 @@ public class InserirControllerSpringHibernate {
 		return new ModelAndView("InserirSpringHibernate");
 	}
 	
+	@RequestMapping(value ="/AlterarSpringHibernate.html", method= RequestMethod.GET)
+	public ModelAndView Alterar() {
+		return new ModelAndView("AlterarSpringHibernate");
+	}
+	
+	@RequestMapping(value="/RemoverSpringHibernate.html",method=RequestMethod.GET)
+	public ModelAndView Remover() {
+		return new ModelAndView("RemoverSpringHibernate");
+	}
+	
 	@RequestMapping("InserirSpringHibernate")
 	public String adiciona(PessoaHibernate pessoa) throws SQLException {
 		
@@ -46,5 +57,33 @@ public class InserirControllerSpringHibernate {
 		return "ok2";
 		
 	}
+	
+	// Listando Tudo
+	@RequestMapping(value="listagem",method = RequestMethod.GET)
+	public String lista(Model model) throws Exception {
+		
+		model.addAttribute("listas",dao.getUsuarios());
+		
+		return "listaHibernateSpring";
+	}
+	
+	// Atualizando
+	@RequestMapping(value="alterar",method=RequestMethod.POST)
+	public String update(PessoaHibernate pessoa) throws Exception {
+		
+		dao.alterar(pessoa);
+		
+		return "okHibernate";
+	}
+	
+	// Removendo
+	@RequestMapping(value="remover",method = RequestMethod.GET)
+	public String deletar(PessoaHibernate pessoa) throws Exception {
+		
+		dao.excluir(pessoa);
+		
+		return "okRemoveHibernate";
+	}
+	
 
 }

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Inserido com Hiberbenate OGM 5 com Spring4 </title>
+<title>Alternando com SpringMVC</title>
 </head>
 <body>
 
@@ -14,9 +14,11 @@
 <img alt="MongoDB" src="../recursos/imagens/mongoDB.png" height="150" align="middle">
 <h1><a href="https://github.com/Daniel-Dos/DanielDias-MongoDB">GitHub - DanielDias-Mongo</a></h1>
 
-<h1>Os Dados Foram Inseridos com Sucesso no MongoDB utilizando o Hiberbenate OGM 5 com Spring4</h1>
+<h1>Os Dados de ${pessoaHibernate.nome}, Foram Atualizados com Sucesso no MongoDB utilizando o Hibernate OGN 5 e Spring 4</h1>
 
  <a href="listagem">lista</a>
+ 
+ </div>
  <br /><br />
  
 <footer id="footer">

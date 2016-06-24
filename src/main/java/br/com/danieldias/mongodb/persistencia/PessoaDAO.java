@@ -1,6 +1,7 @@
 package br.com.danieldias.mongodb.persistencia;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -28,6 +29,21 @@ public class PessoaDAO  implements GenericoDAO<PessoaHibernate> {
 		} finally {
 			em.close();
 		}
+		
+	}
+	@Override
+	public List<PessoaHibernate> getUsuarios() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public void alterar(PessoaHibernate entidade) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void excluir(PessoaHibernate entidade) throws Exception {
+		// TODO Auto-generated method stub
 		
 	}
 

@@ -19,7 +19,13 @@
   <li><a href="pessoa/listagem">Consultar</a></li>
    <li><a href="pessoa/AlterarSpring.html">Alterar</a></li>
    <li><a href="pessoa/RemoverSpring.html">Remover</a></li>
+   <br /><br />
+   
+   <h2>MongoDB Utilizando Hibernate OGM 5 + Spring 4</h2>
    <li><a href="pessoaHibernateSpring/InserirSpringHibernate.html">Cadastrar - Hibernate com Spring</a></li>
+   <li><a href="pessoaHibernateSpring/listagem">Consultar - - Hibernate com Spring</a></li>
+   <li><a href="pessoaHibernateSpring/AlterarSpringHibernate.html">Alterar - Hibernate com Spring</a></li>
+   <li><a href="pessoaHibernateSpring/RemoverSpringHibernate.html">Remover  - Hibernate com Spring</a></li>
    
 </ul>
 
