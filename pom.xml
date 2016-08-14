@@ -68,6 +68,15 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			<plugin>
+    				<groupId>org.eluder.coveralls</groupId>
+				    <artifactId>coveralls-maven-plugin</artifactId>
+				    <version>4.2.0</version>
+				    <configuration>
+				        <repoToken>Cu2XSKd7L4Thj8avZJId2m3LWajQBy92O</repoToken>
+				    </configuration>
+			</plugin>
+
 		</plugins>
 		<resources> 
     <resource> 
