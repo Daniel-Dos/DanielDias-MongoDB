@@ -1,7 +1,6 @@
 ﻿# DanielDias-MongoDB
 
 [![Build Status](https://travis-ci.org/Daniel-Dos/DanielDias-MongoDB.svg)](https://travis-ci.org/Daniel-Dos/DanielDias-MongoDB)
-[![Coverage Status](https://coveralls.io/repos/github/Daniel-Dos/DanielDias-MongoDB/badge.svg)](https://coveralls.io/github/Daniel-Dos/DanielDias-MongoDB)
 
 Iniciando com MongoDB utilizando Java 
 
