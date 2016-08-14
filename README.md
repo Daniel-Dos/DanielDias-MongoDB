@@ -1,4 +1,7 @@
 ﻿# DanielDias-MongoDB
+
+[![Build Status](https://travis-ci.org/Daniel-Dos/DanielDias-MongoDB.svg)](https://travis-ci.org/Daniel-Dos/DanielDias-MongoDB)
+
 Iniciando com MongoDB utilizando Java 
 
 # Recursos Utilizados
