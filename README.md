@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Daniel-Dos/DanielDias-MongoDB.svg)](https://travis-ci.org/Daniel-Dos/DanielDias-MongoDB)
 [![Dependency Status](https://www.versioneye.com/user/projects/57b07041bcd81f0035a24158/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/57b07041bcd81f0035a24158)
+[![License](https://img.shields.io/badge/license-AGPL-blue.svg)](https://github.com/Daniel-Dos/DanielDias-MongoDB/blob/master/LICENSE)
 
 Iniciando com MongoDB utilizando Java 
 
