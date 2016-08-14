@@ -1,6 +1,7 @@
 ﻿# DanielDias-MongoDB
 
 [![Build Status](https://travis-ci.org/Daniel-Dos/DanielDias-MongoDB.svg)](https://travis-ci.org/Daniel-Dos/DanielDias-MongoDB)
+[![Dependency Status](https://www.versioneye.com/user/projects/57b07041bcd81f0035a24158/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/57b07041bcd81f0035a24158)
 
 Iniciando com MongoDB utilizando Java 
 
