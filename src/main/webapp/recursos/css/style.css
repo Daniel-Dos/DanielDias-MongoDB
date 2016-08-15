@@ -1,0 +1,9 @@
+body {
+	background-image:url("../imagens/backgrounds-mongobd.jpeg");
+}
+#fundo{
+	background:#66CD00;
+	width:75%;
+	padding:1cm 1cm 2cm 2cm;
+	border-radius:15px;
+}

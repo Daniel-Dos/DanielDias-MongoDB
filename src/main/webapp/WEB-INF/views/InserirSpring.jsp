@@ -6,14 +6,34 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Inserir no MongoDB</title>
+<!-- bootstrap -->
+	<link rel="stylesheet" href="../recursos/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../recursos/bootstrap/css/bootstrap-theme.min.css">
+	<script src="../recursos/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../recursos/bootstrap/js/jquery-3.1.0.min.js"></script>
+<!-- bootstrap -->
+<link rel="stylesheet" href="../recursos/css/style.css">
+
 </head>
 <body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+		<div>
+			<ul class="nav navbar-nav">
+				<li>
+					<div class="navbar-header">
+						<a href="../index.html" class="navbar-brand">Home</a>
+					</div>
+				</li>
+	
+			</ul>
+		</div>
+	</div>
 
-<div align="center">
+<div align="center" style="padding-top: 2cm">
 <img alt="MongoDB" src="../recursos/imagens/mongodb-logo.png" height="150" align="middle">
-<h1><a href="https://github.com/Daniel-Dos/DanielDias-MongoDB">GitHub - DanielDias-Mongo</a></h1>
+<center id="fundo"> <h1><a href="https://github.com/Daniel-Dos/DanielDias-MongoDB">GitHub - DanielDias-Mongo</a></h1>
 
-<form action="InserirSpring" method="post">
+<form  action="InserirSpring" method="post">
 
    Nome: <input type="text" name="nome"/><br /><br />
    Idade: <input type="number" name="idade"/><br /> <br />
@@ -29,8 +49,9 @@
 
 
 </form>
-
+</center>
 </div>
+
 <br /><br />
 <footer id="footer">
             <ul style="list-style: none;" align="center">
