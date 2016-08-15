@@ -5,35 +5,57 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>MongoDB com Spring</title>
+<!-- bootstrap -->
+	<link rel="stylesheet" href="recursos/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="recursos/bootstrap/css/bootstrap-theme.min.css">
+	<script src="recursos/bootstrap/js/bootstrap.min.js"></script>
+	<script src="recursos/bootstrap/js/jquery-3.1.0.min.js"></script>
+<!-- bootstrap -->
+<link rel="stylesheet" href="recursos/css/style.css">
+
 </head>
 <body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+		<div>
+			<ul class="nav navbar-nav">
+				<li>
+					<div class="navbar-header">
+						<a href="index.html" class="navbar-brand">Home</a>
+					</div>
+				</li>
+	
+			</ul>
+		</div>
+	</div>
+<div align="center" style="padding-top: 2cm;"><img src="recursos/imagens/mongoDB.png"/>
 
-<div align="center"><img src="recursos/imagens/mongoDB.png" align="middle"/>
-<br /><br />
 
-<h1><a href="https://github.com/Daniel-Dos/DanielDias-MongoDB">GitHub - DanielDias-Mongo</a></h1>
-
-<h2>MongoDB Utilizando o Spring</h2>
-<ul style="list-style-type:none">
-  <li><a href="pessoa/InserirSpring.html">Cadastrar</a></li>
-  <li><a href="pessoa/listagem">Consultar</a></li>
-   <li><a href="pessoa/AlterarSpring.html">Alterar</a></li>
-   <li><a href="pessoa/RemoverSpring.html">Remover</a></li>
-   <br /><br />
-   
-   <h2>MongoDB Utilizando Hibernate OGM 5 + Spring 4</h2>
-   <li><a href="pessoaHibernateSpring/InserirSpringHibernate.html">Cadastrar - Hibernate com Spring</a></li>
-   <li><a href="pessoaHibernateSpring/listagem">Consultar - - Hibernate com Spring</a></li>
-   <li><a href="pessoaHibernateSpring/AlterarSpringHibernate.html">Alterar - Hibernate com Spring</a></li>
-   <li><a href="pessoaHibernateSpring/RemoverSpringHibernate.html">Remover  - Hibernate com Spring</a></li>
-   
-</ul>
-
+<h3><a href="https://github.com/Daniel-Dos/DanielDias-MongoDB"><b> GitHub - DanielDias-Mongo</b></a></h3>
 </div>
-<br /><br />
+<br/><br/>
+<div align="center">
+
+<div class="list-group" style="width:350px; float: left;  margin-left:130px; position: relative;"> 
+	<h3 class="list-group-item active">MongoDB Utilizando <br/>o Spring</h3>
+  		<a href="pessoa/InserirSpring.html" class="list-group-item">Cadastrar</a>
+  		<a href="pessoa/listagem" class="list-group-item">Consultar</a>
+   		<a href="pessoa/AlterarSpring.html" class="list-group-item">Alterar</a>
+   		<a href="pessoa/RemoverSpring.html" class="list-group-item">Remover</a>
+</div>
+
+<div class="list-group" style="width:420px; float: left; padding-left: 1cm;">
+   <h3 class="list-group-item active">MongoDB Utilizando Hibernate OGM 5 + Spring 4</h3>
+   <a href="pessoaHibernateSpring/InserirSpringHibernate.html" class="list-group-item">Cadastrar - Hibernate com Spring</a>
+   <a href="pessoaHibernateSpring/listagem" class="list-group-item">Consultar - - Hibernate com Spring</a>
+   <a href="pessoaHibernateSpring/AlterarSpringHibernate.html" class="list-group-item">Alterar - Hibernate com Spring</a>
+   <a href="pessoaHibernateSpring/RemoverSpringHibernate.html" class="list-group-item">Remover  - Hibernate com Spring</a>
+</div>
+<span style="display:block;clear:both;">
+</div>  
+
 <footer id="footer">
             <ul style="list-style: none;" align="center">
-            <li>Copyright &copy; Daniel Dias dos Santos 2016</li>
+            <li>Copyright &copy; Daniel Dias dos Santos  e Valdemir Praxedes Trindade 2016</li>
            </ul>
         </footer>
 
