@@ -14,24 +14,31 @@ import org.bson.Document;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.result.DeleteResult;
+
+import static com.mongodb.client.model.Filters.eq;
+
+import br.com.danieldias.mongodb.modelo.Pessoa;
 
 /**
- * Servlet implementation class ConsultarTodosController
+ * Servlet implementation class RemoverController
  * @author daniel
  */
-@WebServlet("/ConsultarTodosController")
-public class ConsultarTodosController extends HttpServlet {
+@WebServlet("/RemoverController")
+public class RemoverController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		RequestDispatcher visao = null;
+		Pessoa pessoa = new Pessoa();
+		pessoa.setNome(request.getParameter("nome"));
 		
 		MongoClient conexao = new MongoClient();
 		MongoDatabase dataBase = conexao.getDatabase("OmegaWare");
-		MongoCollection<Document> collectionPessoas = dataBase.getCollection("Pessoas"); 
+		MongoCollection<Document> collectionPessoas = dataBase.getCollection("Pessoas");
 		
-		request.setAttribute("listas", collectionPessoas.find().iterator());
+		DeleteResult deletar = collectionPessoas.deleteOne(eq("nome",pessoa.getNome()));
 		
 		visao = request.getRequestDispatcher("Inserir.jsp");
 		visao.forward(request, response);

@@ -83,5 +83,12 @@
 <input type="submit" value="consultar"/>
 </form>
 
+<h1>Deletar Dados</h1>
+
+<form action="RemoverController"method="post">
+Nome:<input type="text" name="nome"/>
+<input type="submit" value="deletar"/>
+</form>
+
 </body>
 </html>
