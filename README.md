@@ -18,7 +18,4 @@ Iniciando com MongoDB utilizando Java
 * RoboMongo 0.9.0-RC7
 * Hibernate OGM 5.0
 
-# Contribuidores
 
- - Daniel Dias  - daniel.dias.analistati@gmail.com
- -  [Valdemir Praxedes](https://github.com/valdemir92) - valdemirpraxedes92@gmail.com
