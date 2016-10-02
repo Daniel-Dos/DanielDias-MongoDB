@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.log4j.Logger;
+
 import org.bson.Document;
 
 import com.mongodb.MongoClient;
@@ -36,17 +36,11 @@ public class AlterarController extends HttpServlet {
 		
 		RequestDispatcher visao = null;
 		Pessoa pessoa = new Pessoa();
-		Logger log =
-		        Logger.getLogger(AlterarController.class);
-		
-		 log.debug("Validando anexos obrigatorios...");
 		
 		MongoClient conexao = new MongoClient();
 		MongoDatabase dataBase = conexao.getDatabase("OmegaWare");
 		MongoCollection<Document> collectionPessoas = dataBase.getCollection("Pessoas");
-		
-		log.debug("Coletando Dados");
-		
+				
 		pessoa.setNome(request.getParameter("nome"));
 		pessoa.setIdade(Integer.parseInt(request.getParameter("idade")));
 		pessoa.setProfissao(request.getParameter("profissao"));
