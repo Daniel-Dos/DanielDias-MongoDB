@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Inserir no MongoDB</title>
+<title>MongoDB Web Servlet</title>
 <!-- bootstrap -->
 	<link rel="stylesheet" href="recursos/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="recursos/bootstrap/css/bootstrap-theme.min.css">
@@ -33,6 +33,8 @@
 <img src="recursos/imagens/mongoDB.png" style="padding-top: 2cm"/>
 <br /><br />
 
+<h1>Inserir Dados</h1>
+
 <form action="InserirController" method="post">
 
    Nome: <input type="text" name="nome"/><br /><br />
@@ -45,8 +47,6 @@
    Data de Nascimento:<input type="date" name="data"/>
    
    <input type="submit" value="Cadastrar Dados no MongoDB"/>
-
-
 </form>
 
 <h1>Lista dos Dados</h1>
@@ -75,19 +75,31 @@
 				<td>
 				<fmt:formatDate value="${tarefa.Nascimento}" pattern="dd/MM/yyyy"/>
 				</td>
-				
-				
 			</tr>
 		</c:forEach>
 	</table>
-<input type="submit" value="consultar"/>
+<input type="submit" value="consultar Dados do MongoDB"/>
+</form>
+
+<h1>Alterar Dados</h1>
+
+<form action="AlterarController" method="post">
+
+   Nome: <input type="text" name="nome"/><br /><br />
+   Idade: <input type="number" name="idade"/><br /> <br />
+   Profissão: <input type="text" name="profissao"/><br /><br />
+   Endereço: <input type="text" name="endereco"/><br /><br />
+   Cidade: <input type="text" name="cidade"/><br /><br />
+   Bairro: <input type="text" name="bairro"/><br /><br />
+   Estado: <input type="text" name="estado"/><br /><br/>
+   <input type="submit" value="Alterar Dados no MongoDB"/>
 </form>
 
 <h1>Deletar Dados</h1>
 
 <form action="RemoverController"method="post">
 Nome:<input type="text" name="nome"/>
-<input type="submit" value="deletar"/>
+<input type="submit" value="Deletar Dados do MongoDB"/>
 </form>
 
 </body>
