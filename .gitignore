@@ -11,11 +11,9 @@
 .DS_Store
 .classpath
 .project
- rebel.xml
+/src/main/java/rebel.xml
 .tern-project
 .springBeans
 .settings/
 target/
-
-
 /bin/
