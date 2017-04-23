@@ -15,11 +15,15 @@
  */
 package br.com.danieldias.restful.controller;
 
+import java.util.List;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+
+import br.com.danieldias.restful.model.Pessoa;
+import br.com.danieldias.restful.servicos.PessoaServico;
 
 /**
  * @author daniel
@@ -27,12 +31,14 @@ import javax.ws.rs.core.Response;
  * daniel.dias.analistati@gmail.com
  * twitter:@danieldiasjava
  */
-@Path("/hello")
-public class HelloController {
+@Path("/pessoa")
+public class PessoaController {
 
+	PessoaServico pessoaServico = new PessoaServico();
+	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response getMensagem() {
-		return Response.ok().entity(new String("Hello World ! ")).build();
+	public List<Pessoa> getPessoas() {
+		return pessoaServico.listarPessoas();
 	}
 }
