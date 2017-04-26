@@ -17,6 +17,7 @@ package br.com.danieldias.restful.controller;
 
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -26,16 +27,17 @@ import br.com.danieldias.restful.model.Pessoa;
 import br.com.danieldias.restful.servicos.PessoaServico;
 
 /**
- * @author daniel
- * github:Daniel-Dos
+ * @author daniel 
+ * github:Daniel-Dos 
  * daniel.dias.analistati@gmail.com
  * twitter:@danieldiasjava
  */
 @Path("/pessoa")
 public class PessoaController {
-
-	PessoaServico pessoaServico = new PessoaServico();
 	
+	@Inject
+	private PessoaServico pessoaServico;
+
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Pessoa> getPessoas() {

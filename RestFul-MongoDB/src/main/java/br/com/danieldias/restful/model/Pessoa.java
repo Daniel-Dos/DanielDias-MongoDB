@@ -16,7 +16,7 @@
 package br.com.danieldias.restful.model;
 
 import java.io.Serializable;
-import java.util.Calendar;
+import java.util.Date;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -38,7 +38,6 @@ import lombok.Data;
  * daniel.dias.analistati@gmail.com
  * twitter:@danieldiasjava
  */
-// @ApplicationScoped
 @Entity
 @Data
 public class Pessoa implements Serializable {
@@ -56,7 +55,8 @@ public class Pessoa implements Serializable {
 	@Embedded
 	private Endereco endereco;
 
-	@Temporal(TemporalType.DATE)
+	
 	@JsonFormat(pattern = "yyyy-MM-dd")
-	private Calendar dataCadastro;
+	@Temporal(TemporalType.DATE)
+	private Date dataCadastro;
 }

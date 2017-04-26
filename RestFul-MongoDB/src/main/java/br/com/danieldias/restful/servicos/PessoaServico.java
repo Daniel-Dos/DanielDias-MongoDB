@@ -17,19 +17,22 @@ package br.com.danieldias.restful.servicos;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import br.com.danieldias.restful.model.Pessoa;
-import br.com.danieldias.restful.repositorio.PessoaDAOImpl;
+import br.com.danieldias.restful.repositorio.PessoaDAO;
 
 /**
- * @author daniel
- * github:Daniel-Dos
+ * @author daniel 
+ * github:Daniel-Dos 
  * daniel.dias.analistati@gmail.com
  * twitter:@danieldiasjava
  */
 public class PessoaServico {
-	
-	PessoaDAOImpl pessoaDAO = new PessoaDAOImpl();
-	
+
+	@Inject
+	private PessoaDAO pessoaDAO;
+
 	public List<Pessoa> listarPessoas() {
 		return pessoaDAO.getPessoas();
 	}
