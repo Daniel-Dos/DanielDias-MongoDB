@@ -55,7 +55,6 @@ public class Pessoa implements Serializable {
 	@Embedded
 	private Endereco endereco;
 
-	
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	@Temporal(TemporalType.DATE)
 	private Date dataCadastro;

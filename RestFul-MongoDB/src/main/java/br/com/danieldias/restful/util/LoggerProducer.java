@@ -13,31 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package br.com.danieldias.restful.servicos;
+package br.com.danieldias.restful.util;
 
-import java.util.List;
+import java.util.logging.Logger;
 
-import javax.inject.Inject;
-
-import br.com.danieldias.restful.model.Pessoa;
-import br.com.danieldias.restful.repositorio.PessoaDAO;
+import javax.enterprise.inject.Produces;
+import javax.enterprise.inject.spi.InjectionPoint;
 
 /**
- * @author daniel 
- * github:Daniel-Dos 
+ * @author daniel
+ * github:Daniel-Dos
  * daniel.dias.analistati@gmail.com
  * twitter:@danieldiasjava
  */
-public class PessoaServico {
+public class LoggerProducer {
 
-	@Inject
-	private PessoaDAO pessoaDAO;
-
-	public List<Pessoa> listarPessoas() {
-		return pessoaDAO.getPessoas();
-	}
-
-	public void inserirPessoa(Pessoa pessoa) {
-		pessoaDAO.adicionar(pessoa);		
+	@Produces
+	public Logger produceLogger(InjectionPoint injectionPoint) {
+		return Logger.getLogger(injectionPoint.getMember().getDeclaringClass().getName());
 	}
 }

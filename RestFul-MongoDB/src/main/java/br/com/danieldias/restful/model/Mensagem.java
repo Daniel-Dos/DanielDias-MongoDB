@@ -13,31 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package br.com.danieldias.restful.servicos;
+package br.com.danieldias.restful.model;
 
-import java.util.List;
-
-import javax.inject.Inject;
-
-import br.com.danieldias.restful.model.Pessoa;
-import br.com.danieldias.restful.repositorio.PessoaDAO;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
 /**
- * @author daniel 
- * github:Daniel-Dos 
+ * @author daniel
+ * github:Daniel-Dos
  * daniel.dias.analistati@gmail.com
  * twitter:@danieldiasjava
  */
-public class PessoaServico {
+@Data
+@AllArgsConstructor
+public class Mensagem {
 
-	@Inject
-	private PessoaDAO pessoaDAO;
-
-	public List<Pessoa> listarPessoas() {
-		return pessoaDAO.getPessoas();
-	}
-
-	public void inserirPessoa(Pessoa pessoa) {
-		pessoaDAO.adicionar(pessoa);		
-	}
+	private String mensagem;
 }

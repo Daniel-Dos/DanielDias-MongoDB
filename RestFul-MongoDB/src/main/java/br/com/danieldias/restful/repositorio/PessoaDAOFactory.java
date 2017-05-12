@@ -15,49 +15,24 @@
  */
 package br.com.danieldias.restful.repositorio;
 
-import java.util.List;
-
-import javax.inject.Inject;
+import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.Produces;
 import javax.persistence.EntityManager;
-
-import org.bson.types.ObjectId;
-
-import br.com.danieldias.restful.model.Pessoa;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 /**
- * @author daniel 
- * github:Daniel-Dos 
+ * @author daniel
+ * github:Daniel-Dos
  * daniel.dias.analistati@gmail.com
  * twitter:@danieldiasjava
  */
-public class PessoaDAOImpl implements PessoaDAO {
+@ApplicationScoped
+public class PessoaDAOFactory {
 
-	@Inject
-	EntityManager em;
-
-	@Override
-	public void adicionar(Pessoa entidade) {
-		em.getTransaction().begin();
-		em.persist(entidade);
-		em.getTransaction().commit();
-		em.close();
-	}
-
-	@Override
-	public void atualizar(Pessoa entidade) {
-	}
-
-	@Override
-	public void excluir(ObjectId id) {
-	}
-
-	@Override
-	public Pessoa getPorId(ObjectId id) {
-		return null;
-	}
-
-	@Override
-	public List<Pessoa> getPessoas() {
-		return em.createQuery("FROM Pessoa", Pessoa.class).getResultList();
+	@Produces
+	public EntityManager criarEntityManager() {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("RestFul-MongoDB");
+		return emf.createEntityManager();
 	}
 }
