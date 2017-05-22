@@ -1,8 +1,8 @@
 ﻿# DanielDias-MongoDB
 
 [![Build Status](https://travis-ci.org/Daniel-Dos/DanielDias-MongoDB.svg)](https://travis-ci.org/Daniel-Dos/DanielDias-MongoDB)
-[![Dependency Status](https://www.versioneye.com/user/projects/57b07041bcd81f0035a24158/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/57b07041bcd81f0035a24158)
-[![Version](https://img.shields.io/badge/version-1.0.2-green.svg?style=flat)](https://github.com/Daniel-Dos/DanielDias-MongoDB/releases/tag/1.0.2)
+[![Dependency Status](https://www.versioneye.com/user/projects/592258c56bbbd600466a5035/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/592258c56bbbd600466a5035)
+#[![Version](https://img.shields.io/badge/version-1.0.2-green.svg?style=flat)](https://github.com/Daniel-Dos/DanielDias-MongoDB/releases/tag/1.0.2)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/Daniel-Dos/DanielDias-MongoDB/blob/master/LICENSE)
 
 Iniciando com MongoDB utilizando Java 
