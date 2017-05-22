@@ -12,6 +12,9 @@
 .classpath
 .project
 /Servlet-MongoDB/src/main/java/rebel.xml
+/RestFul-MongoDB/src/main/java/rebel.xml
+/SpringMVCHibernateOGM/src/main/java/rebel.xml
+/SpringMVC-MONGODB/src/main/java/rebel.xml
 .tern-project
 .springBeans
 .settings/
