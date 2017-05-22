@@ -41,6 +41,9 @@
 					<mapping>
 						<java>SLASHSTAR_STYLE</java>
 					</mapping>
+<excludes>
+           			 <exclude>.editorconfig</exclude>
+        </excludes>
 				</configuration>
 				<executions>
 					<execution>
