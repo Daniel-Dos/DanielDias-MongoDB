@@ -1,4 +1,4 @@
-﻿# DanielDias-MongoDB
+# DanielDias-MongoDB
 
 [![Build Status](https://travis-ci.org/Daniel-Dos/DanielDias-MongoDB.svg)](https://travis-ci.org/Daniel-Dos/DanielDias-MongoDB)
 [![Dependency Status](https://www.versioneye.com/user/projects/592258c56bbbd600466a5035/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/592258c56bbbd600466a5035)
