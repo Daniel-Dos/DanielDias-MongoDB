@@ -158,6 +158,7 @@
 					</mapping>
  					<excludes>
            			 <exclude>.editorconfig</exclude>
+						<exclude>_config.yml</exclude>
         </excludes>
 				</configuration>
 				<executions>
