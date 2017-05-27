@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright © 2017 Daniel Dias
+    Copyright © 2017 Daniel Dias (daniel.dias.analistati@gmail.com)
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -54,12 +54,6 @@
 		<dependency>
 			<groupId>org.hibernate.ogm</groupId>
 			<artifactId>hibernate-ogm-mongodb</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
 		</dependency>
 
 		<dependency>
@@ -116,13 +110,6 @@
 			<version>3.1.2.Final</version>
 		</dependency>
 
-		<dependency>
-			<groupId>javax.servlet.jsp</groupId>
-			<artifactId>javax.servlet.jsp-api</artifactId>
-			<version>2.3.1</version>
-		</dependency>
-
-
 	</dependencies>
 
 	<build>
@@ -148,18 +135,23 @@
 				<artifactId>license-maven-plugin</artifactId>
 				<version>3.0</version>
 				<configuration>
-					<header>/src/license/header-template.txt</header>
+					 <header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
 					<properties>
 						<owner>Daniel Dias</owner>
+						<email>daniel.dias.analistati@gmail.com</email>
 						<project.inceptionYear>2017</project.inceptionYear>
 					</properties>
+					<includes>
+                        <include>src/**/*.java</include>
+                        <exclude>src/**/*.jsp</exclude>
+                        <include>pom.xml</include>
+                    </includes>
+                     <excludes>
+                    	<exclude>src/main/webapp/recursos</exclude>
+                    </excludes>
 					<mapping>
 						<java>SLASHSTAR_STYLE</java>
 					</mapping>
- 					<excludes>
-           			 <exclude>.editorconfig</exclude>
-						<exclude>_config.yml</exclude>
-        </excludes>
 				</configuration>
 				<executions>
 					<execution>
@@ -186,6 +178,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
+
 	<modules>
 		<module>Servlet-MongoDB</module>
 		<module>SpringMVC-MONGODB</module>
