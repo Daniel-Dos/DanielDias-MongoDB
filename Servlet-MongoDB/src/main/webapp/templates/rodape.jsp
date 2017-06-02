@@ -35,8 +35,8 @@
 		</div>
 	</footer>
 	<script type="text/javascript"
-		src="<c:url value="/recursos/bootstrap/js/bootstrap.min.js"/>"></script>
+		src="<c:url value="/recursos/bootstrap/js/jquery.min.js"/>"></script>
 	<script type="text/javascript"
-		src="<c:url value="/recursos/bootstrap/js/jquery-3.1.0.min.js"/>"></script>
+		src="<c:url value="/recursos/bootstrap/js/bootstrap.min.js"/>"></script>
 </body>
 </html>
