@@ -26,7 +26,7 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import org.bson.types.ObjectId;
+import org.hibernate.annotations.Type;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -46,7 +46,8 @@ public class Pessoa implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private ObjectId id;
+	@Type(type = "objectid")
+	private String id;
 
 	private String nome;
 	private int idade;
@@ -55,7 +56,7 @@ public class Pessoa implements Serializable {
 	@Embedded
 	private Endereco endereco;
 
-	@JsonFormat(pattern = "yyyy-MM-dd")
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	@Temporal(TemporalType.DATE)
 	private Date dataCadastro;
 }

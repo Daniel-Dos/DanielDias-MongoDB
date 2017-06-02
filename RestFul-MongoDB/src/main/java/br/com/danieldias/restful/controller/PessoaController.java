@@ -32,10 +32,8 @@ import br.com.danieldias.restful.model.Pessoa;
 import br.com.danieldias.restful.servicos.PessoaServico;
 
 /**
- * @author daniel 
- * github:Daniel-Dos 
- * daniel.dias.analistati@gmail.com
- * twitter:@danieldiasjava
+ * @author daniel github:Daniel-Dos daniel.dias.analistati@gmail.com
+ *         twitter:@danieldiasjava
  */
 @Path("/pessoa")
 public class PessoaController {
