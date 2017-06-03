@@ -19,6 +19,8 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import org.bson.types.ObjectId;
+
 import br.com.danieldias.restful.model.Pessoa;
 import br.com.danieldias.restful.repositorio.PessoaDAO;
 
@@ -39,5 +41,9 @@ public class PessoaServico {
 
 	public void inserirPessoa(Pessoa pessoa) {
 		pessoaDAO.adicionar(pessoa);
+	}
+
+	public void excluirPessoa(ObjectId id) {
+		pessoaDAO.excluir(id);
 	}
 }

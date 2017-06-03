@@ -20,20 +20,26 @@ import java.util.logging.Logger;
 
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+
+import org.bson.types.ObjectId;
 
 import br.com.danieldias.restful.model.Mensagem;
 import br.com.danieldias.restful.model.Pessoa;
 import br.com.danieldias.restful.servicos.PessoaServico;
 
 /**
- * @author daniel github:Daniel-Dos daniel.dias.analistati@gmail.com
- *         twitter:@danieldiasjava
+ * @author daniel 
+ * github:Daniel-Dos 
+ * daniel.dias.analistati@gmail.com
+ * twitter:@danieldiasjava
  */
 @Path("/pessoa")
 public class PessoaController {
@@ -45,9 +51,9 @@ public class PessoaController {
 	Logger logger;
 
 	@POST
-	@Path("/cadastrar")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/cadastrar")
 	public Response cadastrarPessoa(Pessoa pessoa) {
 		pessoaServico.inserirPessoa(pessoa);
 		logger.info("Salvo com Sucesso!");
@@ -59,5 +65,14 @@ public class PessoaController {
 	public List<Pessoa> getPessoas() {
 		logger.info("Listando as Pessoas.");
 		return pessoaServico.listarPessoas();
+	}
+
+	@DELETE
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("deletar/{codigo}")
+	public Response removerPessoa(@PathParam("codigo") ObjectId codigo) {
+		pessoaServico.excluirPessoa(codigo);
+		logger.info("Excluido com Sucesso!");
+		return Response.ok().entity(new Mensagem("Pessoa excluida com Sucesso!")).build();
 	}
 }

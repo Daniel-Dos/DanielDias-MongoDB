@@ -49,11 +49,18 @@ public class PessoaDAOImpl implements PessoaDAO {
 
 	@Override
 	public void excluir(ObjectId id) {
+		em.getTransaction().begin();
+		em.remove(getPorId(id));
+		em.getTransaction().commit();
+		em.close();
 	}
 
 	@Override
 	public Pessoa getPorId(ObjectId id) {
-		return null;
+		return em
+				.createQuery("select e from Pessoa e where e.id=:id", Pessoa.class)
+				.setParameter("id", id.toString())
+				.getSingleResult();
 	}
 
 	@Override

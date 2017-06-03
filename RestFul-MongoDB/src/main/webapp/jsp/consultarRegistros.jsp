@@ -15,31 +15,33 @@
     limitations under the License.
 
 --%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE>
 <html ng-app="consultarRegistrosControllerApp">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Consultar Registros</title>
 
-<script type="text/javascript"
-	src="../recursos/angular/angular.min.js"></script>
-<script type="text/javascript"
-	src="../recursos/scriptView/consultarRegistrosController.js"></script>
+<script type="text/javascript" src="../recursos/angular/angular.min.js"></script>
+<script type="text/javascript" src="../recursos/scriptView/consultarRegistrosController.js"></script>
 
 </head>
 <body>
-
-	<table ng-controller="consultarRegistrosController" data-ng-init="init()" id="tableData" class="table table-bordered table-hover table-striped">
-		<thead >
+	<a class="btn btn-primary" href="adicionarRegistros.jsp">Adicionar
+		Registros</a>
+	<hr />
+	<table ng-controller="consultarRegistrosController"
+		data-ng-init="init()" id="tableData"
+		class="table table-bordered table-hover table-striped">
+		<thead>
 			<tr>
-			    <th>ID</th>
+				<th>ID</th>
 				<th>Nome</th>
 				<th>Idade</th>
-				<th>Profiss�o</th>
-				<th>Endere�o</th>
+				<th>Profissão</th>
+				<th>Endereço</th>
 				<th>Data de Nascimento</th>
 				<th></th>
 				<th></th>
@@ -47,16 +49,19 @@
 		</thead>
 		<tbody>
 			<tr ng-repeat="usuario in usuarios">
-			    <td>{{ usuario.id }}</td>
+				<td>{{ usuario.id }}</td>
 				<td>{{ usuario.nome }}</td>
 				<td>{{ usuario.idade }}</td>
 				<td>{{ usuario.profissao }}</td>
-				<td>
-				Cidade: {{ usuario.endereco.cidade }} <br />
-				Bairro: {{ usuario.endereco.bairro }} <br />
-				Estado: {{ usuario.endereco.estado }}
+				<td>Cidade: {{ usuario.endereco.cidade }} <br /> Bairro: {{
+					usuario.endereco.bairro }} <br /> Estado: {{
+					usuario.endereco.estado }}
 				</td>
 				<td>{{ usuario.dataCadastro}}</td>
+				<td><a ng-href="editarRegistro.html/{{usuario.id}}"
+					class="btn btn-info">Editar</a></td>
+				<td><a href="#" ng-click="excluirRegistro(usuario.id)"
+					class="btn btn-danger">Excluir</a></td>
 			</tr>
 		</tbody>
 	</table>
