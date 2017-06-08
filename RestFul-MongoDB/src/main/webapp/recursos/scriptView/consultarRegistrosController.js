@@ -2,17 +2,17 @@ var consultarRegistrosControllerApp = angular.module("consultarRegistrosControll
 
 consultarRegistrosControllerApp.controller("consultarRegistrosController",function($scope, $window, $http){
 
-	/*CRIANDO UM ARRAY PARA OS REGISTROS QUE VÃO SER RETORNADOS PELO SPRING*/
+	/*CRIANDO UM ARRAY PARA OS REGISTROS QUE VÃO SER RETORNADOS PELO REST*/
 	 $scope.usuarios = new Array();
 
 	 $scope.init = function(){
 
-		 /*CHAMA O MÉTODO consultarTodos DO CONTROLLER GERENCIADO PELO SPRING*/
+		 /*CHAMA O MÉTODO consultarTodos DO CONTROLLER GERENCIADO PELO REST*/
 		 var response = $http.get("/RestFul-MongoDB/api/pessoa");
 
 		 response.success(function(data, status, headers, config) {
 
-			 /*SETA OS REGISTROS QUE FORAM RETORNADOS DO CONTROLLER DO SPRING,
+			 /*SETA OS REGISTROS QUE FORAM RETORNADOS DO CONTROLLER DO REST,
 			  ESSE REGISTROS VÃO PREENCHER OS CAMPOS DA TABELA DA PÁGINA consultarRegistros.jsp
 			  ATAVÉS DO ng-repeat do AngularJS*/
 			 $scope.usuarios = data;

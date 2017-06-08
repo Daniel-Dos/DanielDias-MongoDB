@@ -39,7 +39,7 @@ cadastrarControllerApp.controller("cadastrarController",function($scope, $window
 	};
 
 	$scope.init = function(){
-		 /*CHAMA O MÉTODO consultarTodos DO CONTROLLER GERENCIADO PELO SPRING*/
+		 /*CHAMA O MÉTODO consultarTodos DO CONTROLLER GERENCIADO PELO Rest*/
 		 var response = $http.get("/RestFul-MongoDB/api/pessoa"); 
 	 }
 });

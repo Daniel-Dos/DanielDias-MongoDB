@@ -15,10 +15,12 @@
  */
 package br.com.danieldias.restful.util;
 
+
 import java.util.logging.Logger;
 
 import javax.enterprise.inject.Produces;
 import javax.enterprise.inject.spi.InjectionPoint;
+
 
 /**
  * @author daniel 

@@ -16,7 +16,6 @@
 package br.com.danieldias.restful.controller;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
@@ -29,6 +28,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import java.util.logging.Logger;
 import org.bson.types.ObjectId;
 
 import br.com.danieldias.restful.model.Mensagem;

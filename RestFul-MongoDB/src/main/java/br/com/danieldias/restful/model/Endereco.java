@@ -18,7 +18,9 @@ package br.com.danieldias.restful.model;
 import java.io.Serializable;
 
 import javax.persistence.Embeddable;
+import javax.persistence.EntityListeners;
 
+import br.com.danieldias.restful.util.JPADebugListener;
 import lombok.Data;
 
 /**
@@ -29,6 +31,7 @@ import lombok.Data;
  */
 @Embeddable
 @Data
+@EntityListeners(JPADebugListener.class)
 public class Endereco implements Serializable {
 
 	private static final long serialVersionUID = 1L;

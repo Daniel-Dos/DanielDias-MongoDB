@@ -53,9 +53,9 @@
 				<td>{{ usuario.nome }}</td>
 				<td>{{ usuario.idade }}</td>
 				<td>{{ usuario.profissao }}</td>
-				<td>Cidade: {{ usuario.endereco.cidade }} <br /> Bairro: {{
-					usuario.endereco.bairro }} <br /> Estado: {{
-					usuario.endereco.estado }}
+				<td>Cidade: {{ usuario.endereco.cidade }} <br /> 
+				Bairro: {{usuario.endereco.bairro }} <br /> 
+				Estado: {{usuario.endereco.estado }}
 				</td>
 				<td>{{ usuario.dataCadastro}}</td>
 				<td><a ng-href="editarRegistro.html/{{usuario.id}}"

@@ -38,5 +38,6 @@
 		src="<c:url value="/recursos/bootstrap/js/jquery.min.js"/>"></script>
 	<script type="text/javascript"
 		src="<c:url value="/recursos/bootstrap/js/bootstrap.min.js"/>"></script>
+		
 </body>
 </html>

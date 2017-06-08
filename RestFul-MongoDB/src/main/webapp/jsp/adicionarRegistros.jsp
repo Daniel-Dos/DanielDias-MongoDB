@@ -23,10 +23,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Adicionar Registros</title>
-<script type="text/javascript"
-	src="../recursos/javascript/angular.min.js"></script>
+<script type="text/javascript" src="../recursos/angular/angular.min.js"></script>
 <script type="text/javascript"
 	src="../recursos/scriptView/cadastrarRegistrosController.js"></script>
+<script type="text/javascript" src="../recursos/scriptView/funcoes.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -34,8 +34,7 @@
 			<div class="container">
 				<div class="col-md-8" style="margin-left: 200px;">
 					<br />
-					<form ng-controller="cadastrarController" role="form"
-						class="form-horizontal">
+					<form ng-controller="cadastrarController" role="form">
 
 						<h2 align="center">Novo Cadastro de Usuário</h2>
 						<br />
@@ -74,7 +73,9 @@
 								de Cadastro:</label>
 							<div class="col-sm-6">
 								<input type="text" class=" form-control" id="input-dataCadastro"
-									style="width: 120px;" ng-model="dataCadastro" />
+									style="width: 120px;" ng-model="dataCadastro"
+									placeholder="dd/MM/yyyy" maxlength="10"
+									onkeypress="formata_mascara(this,'##/##/####');" />
 							</div>
 							<br /> <br />
 						</div>
@@ -106,13 +107,14 @@
 							</div>
 							<br /> <br />
 						</div>
-						<p>
 
+						<p>
 							<input type="button" class="btn btn-success" value="Salvar"
 								ng-click="salvarUsuario()" />
-
 						</p>
+
 						<hr />
+
 						<a href="javascript:history.back(1);" class="btn btn-primary">Voltar</a>
 
 					</form>
@@ -120,7 +122,8 @@
 			</div>
 		</div>
 	</div>
-	<br /> <br />
-					<jsp:include page="/templates/rodape.jsp"></jsp:include>
+	<br />
+	<br />
+	<jsp:include page="/templates/rodape.jsp"></jsp:include>
 </body>
 </html>
