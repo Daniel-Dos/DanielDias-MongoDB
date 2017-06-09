@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-
-    Copyright © 2017 Daniel Dias
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-
--->
+<!-- Copyright © 2017 Daniel Dias Licensed under the Apache License, Version 
+	2.0 (the "License"); you may not use this file except in compliance with 
+	the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+	Unless required by applicable law or agreed to in writing, software distributed 
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+	the specific language governing permissions and limitations under the License. -->
 <persistence version="2.1"
 	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
@@ -23,14 +13,12 @@
 		<provider>org.hibernate.ogm.jpa.HibernateOGMPersistence</provider>
 		<class>br.com.danieldias.restful.model.Endereco</class>
 		<class>br.com.danieldias.restful.model.Pessoa</class>
-
 		<properties>
 			<property name="hibernate.ogm.datastore.database" value="javaMongo" />
 			<property name="hibernate.ogm.datastore.host" value="127.0.0.1" />
 			<property name="hibernate.ogm.datastore.provider" value="MONGODB" />
 			<property name="hibernate.ogm.datastore.port" value="27017" />
-			<property name="hibernate.ogm.datastore.create_database"
-				value="true" />
+			<property name="hibernate.ogm.datastore.create_database" value="true" />
 		</properties>
 	</persistence-unit>
 </persistence>

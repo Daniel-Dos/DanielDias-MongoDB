@@ -28,7 +28,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import java.util.logging.Logger;
+import org.apache.logging.log4j.Logger;
 import org.bson.types.ObjectId;
 
 import br.com.danieldias.restful.model.Mensagem;

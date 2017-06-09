@@ -15,17 +15,16 @@
  */
 package br.com.danieldias.restful.util;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import javax.inject.Inject;
 import javax.interceptor.AroundInvoke;
 import javax.interceptor.Interceptor;
 import javax.interceptor.InvocationContext;
 
+import org.apache.logging.log4j.Logger;
 
 /**
- * @author daniel 
+ * @author 
+ * daniel 
  * github:Daniel-Dos 
  * daniel.dias.analistati@gmail.com
  * twitter:@danieldiasjava
@@ -40,11 +39,11 @@ public class LogginInterceptor {
 	@AroundInvoke
 	private Object intercept(InvocationContext ic) throws Exception {
 		logger.info("> {}");
-		logger.log(Level.INFO, "> {}", ic.getMethod());
+		logger.info("> {}", ic.getMethod());
 		try {
 			return ic.proceed();
 		} finally {
-			logger.log(Level.INFO,"< {}", ic.getMethod());
+			logger.info("< {}", ic.getMethod());
 		}
 	}
 }

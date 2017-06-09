@@ -15,10 +15,16 @@
  */
 package br.com.danieldias.restful.util;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.persistence.PostLoad;
+import javax.persistence.PostPersist;
+import javax.persistence.PostRemove;
+import javax.persistence.PostUpdate;
+import javax.persistence.PrePersist;
+import javax.persistence.PreRemove;
+import javax.persistence.PreUpdate;
 
-import javax.persistence.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * @author daniel 
@@ -28,40 +34,40 @@ import javax.persistence.*;
  */
 public class JPADebugListener {
 
-	private Logger logger = Logger.getLogger(this.getClass().getName());
+	private Logger logger = LogManager.getLogger(this.getClass().getName());
 
 	@PrePersist
 	private void pretPersist(Object object) {
-		logger.log(Level.WARNING, "### DebugListener.prePersist({})", object);
+		logger.debug("### DebugListener.prePersist({})", object);
 	}
 
 	@PostPersist
 	private void postPersist(Object object) {
-		logger.log(Level.WARNING, "### DebugListener.postPersist({})", object);
+		logger.debug("### DebugListener.postPersist({})", object);
 	}
 
 	@PreUpdate
 	private void preUpdate(Object object) {
-		logger.log(Level.WARNING, "### DebugListener.preUpdate({})", object);
+		logger.debug("### DebugListener.preUpdate({})", object);
 	}
 
 	@PostUpdate
 	private void postUpdate(Object object) {
-		logger.log(Level.WARNING, "### DebugListener.postUpdate({})", object);
+		logger.debug("### DebugListener.postUpdate({})", object);
 	}
 
 	@PreRemove
 	private void preRemove(Object object) {
-		logger.log(Level.WARNING, "### DebugListener.preRemove({})", object);
+		logger.debug("### DebugListener.preRemove({})", object);
 	}
 
 	@PostRemove
 	private void postRemove(Object object) {
-		logger.log(Level.WARNING, "### DebugListener.postRemove({})", object);
+		logger.debug("### DebugListener.postRemove({})", object);
 	}
 
 	@PostLoad
 	private void postLoad(Object object) {
-		logger.log(Level.WARNING, "### DebugListener.postLoad({})", object);
+		logger.debug("### DebugListener.postLoad({})", object);
 	}
 }
