@@ -27,7 +27,6 @@ cadastrarControllerApp.controller("cadastrarController",function($scope, $window
 		response.success(function(data, status, headers, config) {
 
 			 $window.alert(data.mensagem);
-			 $scope.init();
 	 });
 
 	 response.error(function(data, status, headers, config) {
@@ -37,9 +36,4 @@ cadastrarControllerApp.controller("cadastrarController",function($scope, $window
 	 });		
 
 	};
-
-	$scope.init = function(){
-		 /*CHAMA O MÉTODO consultarTodos DO CONTROLLER GERENCIADO PELO Rest*/
-		 var response = $http.get("/RestFul-MongoDB/api/pessoa"); 
-	 }
 });

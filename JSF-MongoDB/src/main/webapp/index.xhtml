@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Gerenciamento de Pessoas</title>
+</h:head>
+<h:body>
+	<h:form id="form">
+		<p:growl id="message" />
+		<p:dataTable editable="true" id="tabelaClientes"
+			value="#{pessoaController.pessoas}" var="cliente">
+			<p:ajax event="rowEdit" listener="#{pessoaController.onEdit}"
+				update=":form:tabelaClientes :form:message" />
+			<p:column headerText="ID" style="width:5%">
+				<p:cellEditor>
+					<f:facet name="output">
+						<h:outputText value="#{cliente.id}" />
+					</f:facet>
+					<f:facet name="input">
+						<p:inputText value="#{cliente.id}" style="width:100%" />
+					</f:facet>
+				</p:cellEditor>
+			</p:column>
+			<p:column headerText="Nome" style="width:15%">
+				<p:cellEditor>
+					<f:facet name="output">
+						<h:outputText value="#{cliente.nome}" />
+					</f:facet>
+					<f:facet name="input">
+						<p:inputText value="#{cliente.nome}" style="width:100%" />
+					</f:facet>
+				</p:cellEditor>
+			</p:column>
+			<p:column headerText="Idade" style="width:5%">
+				<p:cellEditor>
+					<f:facet name="output">
+						<h:outputText value="#{cliente.idade}" />
+					</f:facet>
+					<f:facet name="input">
+						<p:inputText value="#{cliente.idade}" style="width:100%" />
+					</f:facet>
+				</p:cellEditor>
+			</p:column>
+			<p:column headerText="Profissão" style="width:10%">
+				<p:cellEditor>
+					<f:facet name="output">
+						<h:outputText value="#{cliente.profissao}" />
+					</f:facet>
+					<f:facet name="input">
+						<p:inputText value="#{cliente.profissao}" style="width:100%" />
+					</f:facet>
+				</p:cellEditor>
+			</p:column>
+			<p:column headerText="Endereco" style="width:30%">
+				<p:cellEditor>
+					<f:facet name="output">
+						Cidade: <h:outputText value="#{cliente.endereco.cidade}" />
+						Bairro: <h:outputText value="#{cliente.endereco.bairro}" />
+						Estado: <h:outputText value="#{cliente.endereco.estado}" />
+					</f:facet>
+					<f:facet name="input">
+						<p:inputText value="#{cliente.endereco.cidade}" style="width:100%" />
+						<p:inputText value="#{cliente.endereco.bairro}" style="width:100%" />
+						<p:inputText value="#{cliente.endereco.estado}" style="width:100%" />
+					</f:facet>
+				</p:cellEditor>
+			</p:column>
+			<p:column headerText="Data Cadastro" style="width:25%">
+				<p:calendar value="#{cliente.dataCadastro}" pattern="dd/MM/yyyy"
+					disabled="true" timeZone="UTC" />
+			</p:column>
+			<p:column headerText="Excluir" style="width:5%">
+				<p:commandButton icon="ui-icon-close"
+					update=":form:tabelaClientes :form:message"
+					action="#{pessoaController.excluir}">
+					<f:setPropertyActionListener target="#{pessoaController.pessoa}"
+						value="#{cliente}" />
+				</p:commandButton>
+			</p:column>
+			<p:column style="width:5%" headerText="Editar">
+				<p:rowEditor />
+			</p:column>
+		</p:dataTable>
+		<br />
+		<br />
+		<p:panelGrid columns="1">
+			<f:facet name="header">  
+				Cadastrar nova Pessoa
+   			 </f:facet>
+			<p:row>
+				<h:outputText value="Nome: " />
+				<p:inputText value="#{pessoaController.pessoa.nome}" />
+				<h:outputText value="Idade:" />
+				<p:inputText value="#{pessoaController.pessoa.idade}" />
+				<h:outputText value="Profissao: " />
+				<p:inputText value="#{pessoaController.pessoa.profissao}" />
+				<h:outputText value="Data Cadastro: " />
+				<p:calendar value="#{pessoaController.pessoa.dataCadastro}" pattern="dd/MM/yyyy" />
+			</p:row>
+			<p:row>
+				<h:outputText value="Endereço: " />
+				<br />
+				<br />
+				<h:outputText value="Cidade: " />
+				<p:inputText value="#{pessoaController.pessoa.endereco.cidade}" />
+				<h:outputText value="Bairro: " />
+				<p:inputText value="#{pessoaController.pessoa.endereco.bairro}" />
+				<h:outputText value="Estado: " />
+				<p:inputText value="#{pessoaController.pessoa.endereco.estado}" />
+			</p:row>
+			<p:commandButton value="Cadastrar!"
+				action="#{pessoaController.cadastrar()}"
+				update=":form:tabelaClientes :form:message" />
+		</p:panelGrid>
+	</h:form>
+</h:body>
+</html>
