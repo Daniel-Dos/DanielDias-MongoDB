@@ -15,21 +15,23 @@
  */
 package br.com.danieldias.jsf.uteis;
 
-import javax.faces.context.ExternalContext;
-import javax.faces.context.FacesContext;
-import javax.persistence.EntityManager;
-import javax.servlet.http.HttpServletRequest;
+import static java.lang.annotation.ElementType.METHOD;
+import static java.lang.annotation.ElementType.TYPE;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
-public class Uteis {
-	
-	public static EntityManager JpaEntityManager(){
-		
-		FacesContext facesContext = FacesContext.getCurrentInstance();
-		
-		ExternalContext externalContext = facesContext.getExternalContext();
-		
-		HttpServletRequest request  = (HttpServletRequest)externalContext.getRequest();
-		
-		return (EntityManager)request.getAttribute("entityManager");
-	}
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+
+import javax.interceptor.InterceptorBinding;
+
+/**
+ * @author daniel
+ * github:Daniel-Dos
+ * daniel.dias.analistati@gmail.com
+ * twitter:@danieldiasjava
+ */
+@InterceptorBinding
+@Retention(RUNTIME)
+@Target({ TYPE, METHOD })
+public @interface Transacao {
 }

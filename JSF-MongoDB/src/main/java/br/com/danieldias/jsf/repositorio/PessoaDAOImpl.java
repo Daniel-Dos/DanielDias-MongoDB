@@ -17,29 +17,27 @@ package br.com.danieldias.jsf.repositorio;
 
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
 import org.bson.types.ObjectId;
 
 import br.com.danieldias.jsf.model.Pessoa;
-import br.com.danieldias.jsf.uteis.Uteis;
 
 /**
- * @author daniel github:Daniel-Dos daniel.dias.analistati@gmail.com
- *         twitter:@danieldiasjava
+ * @author daniel 
+ * github:Daniel-Dos 
+ * daniel.dias.analistati@gmail.com
+ * twitter:@danieldiasjava
  */
 public class PessoaDAOImpl implements PessoaDAO {
 
-	// EntityManagerFactory emf =
-	// Persistence.createEntityManagerFactory("jsf-MongoDB");
-	EntityManager em;
+	@Inject
+	private EntityManager em;
 
 	@Override
 	public void adicionar(Pessoa entidade) {
-		
-		em = Uteis.JpaEntityManager();
 		em.persist(entidade);
-
 	}
 
 	@Override
@@ -49,21 +47,18 @@ public class PessoaDAOImpl implements PessoaDAO {
 
 	@Override
 	public void excluir(ObjectId id) {
-		em = Uteis.JpaEntityManager();
 		em.remove(getPorId(id));
 	}
 
 	@Override
 	public Pessoa getPorId(ObjectId id) {
-		em = Uteis.JpaEntityManager();
-		return em.createQuery("select e from Pessoa e where e.id =:id", Pessoa.class).setParameter("id", id.toString())
+		return em.createQuery("select e from Pessoa e where e.id =:id", Pessoa.class)
+				.setParameter("id", id.toString())
 				.getSingleResult();
 	}
 
 	@Override
 	public List<Pessoa> getPessoas() {
-		em = Uteis.JpaEntityManager();
 		return em.createQuery("FROM Pessoa", Pessoa.class).getResultList();
-
 	}
 }

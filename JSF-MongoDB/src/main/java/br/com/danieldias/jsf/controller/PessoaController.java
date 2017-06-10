@@ -31,6 +31,7 @@ import br.com.danieldias.jsf.model.Endereco;
 import br.com.danieldias.jsf.model.Pessoa;
 import br.com.danieldias.jsf.servicos.PessoaServico;
 
+
 /**
  * @author daniel 
  * github:Daniel-Dos 
@@ -54,10 +55,11 @@ public class PessoaController {
 		pessoa = new Pessoa();
 		pessoa.setEndereco(new Endereco());
 	}
-	
+
 	public void cadastrar() {
 		pessoaServico.insert(pessoa);
 		init();
+		addMessage("Cliente Adicionado!");
 	}
 
 	public String atualizar() {
@@ -67,7 +69,6 @@ public class PessoaController {
 		} catch (Exception e) {
 			addMessage(e.getMessage());
 		}
-
 		return "";
 	}
 

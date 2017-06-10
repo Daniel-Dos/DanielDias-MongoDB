@@ -23,6 +23,7 @@ import org.bson.types.ObjectId;
 
 import br.com.danieldias.jsf.model.Pessoa;
 import br.com.danieldias.jsf.repositorio.PessoaDAO;
+import br.com.danieldias.jsf.uteis.Transacao;
 
 /**
  * @author daniel 
@@ -30,12 +31,11 @@ import br.com.danieldias.jsf.repositorio.PessoaDAO;
  * daniel.dias.analistati@gmail.com
  * twitter:@danieldiasjava
  */
+@Transacao
 public class PessoaServico {
 
 	@Inject
 	private PessoaDAO pessoaDAO;
-
-//	 PessoaDAOImpl pessoaDAO = new PessoaDAOImpl();
 
 	public void insert(Pessoa pessoa) {
 		pessoaDAO.adicionar(pessoa);
