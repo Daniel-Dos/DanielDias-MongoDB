@@ -115,7 +115,7 @@
 
 						<hr />
 
-						<a href="javascript:history.back(1);" class="btn btn-primary">Voltar</a>
+						<a href= "../jsp/consultarRegistros.jsp" class="btn btn-primary">Voltar</a>
 
 					</form>
 				</div>
