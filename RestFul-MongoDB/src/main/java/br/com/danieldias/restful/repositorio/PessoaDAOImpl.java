@@ -33,14 +33,11 @@ import br.com.danieldias.restful.model.Pessoa;
 public class PessoaDAOImpl implements PessoaDAO {
 
 	@Inject
-	EntityManager em;
+	private EntityManager em;
 
 	@Override
 	public void adicionar(Pessoa entidade) {
-		em.getTransaction().begin();
 		em.persist(entidade);
-		em.getTransaction().commit();
-		em.close();
 	}
 
 	@Override
@@ -49,10 +46,7 @@ public class PessoaDAOImpl implements PessoaDAO {
 
 	@Override
 	public void excluir(ObjectId id) {
-		em.getTransaction().begin();
 		em.remove(getPorId(id));
-		em.getTransaction().commit();
-		em.close();
 	}
 
 	@Override

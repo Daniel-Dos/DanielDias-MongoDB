@@ -23,6 +23,7 @@ import org.bson.types.ObjectId;
 
 import br.com.danieldias.restful.model.Pessoa;
 import br.com.danieldias.restful.repositorio.PessoaDAO;
+import br.com.danieldias.restful.util.Transacao;
 
 /**
  * @author daniel 
@@ -30,6 +31,7 @@ import br.com.danieldias.restful.repositorio.PessoaDAO;
  * daniel.dias.analistati@gmail.com
  * twitter:@danieldiasjava
  */
+@Transacao
 public class PessoaServico {
 
 	@Inject
