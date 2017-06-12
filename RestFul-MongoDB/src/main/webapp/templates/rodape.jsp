@@ -29,8 +29,8 @@
 <footer class="footer">
 		<div class="container navbar navbar-inverse">
 			<p class="text-center text-primary">
-				Desenvolvido por Daniel Dias. <br /> &copy; 2015 Todos os direitos
-				reservados à Omega Ware.
+				Desenvolvido por Daniel Dias dos Santos. <br /> &copy; 2017 Todos os direitos
+				reservados à Daniel Dias dos Santos.
 			</p>
 		</div>
 	</footer>

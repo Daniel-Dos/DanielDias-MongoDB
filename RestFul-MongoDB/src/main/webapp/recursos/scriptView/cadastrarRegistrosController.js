@@ -28,7 +28,7 @@ cadastrarControllerApp.controller("cadastrarController",function($scope, $window
 
 			 $window.alert(data.mensagem);
 
-             window.location.href="../jsp/consultarRegistros.jsp";
+			 window.location.href ="../jsp/consultarRegistros.jsp";
 	 });
 
 	 response.error(function(data, status, headers, config) {

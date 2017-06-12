@@ -23,8 +23,7 @@ import javax.interceptor.InvocationContext;
 import org.apache.logging.log4j.Logger;
 
 /**
- * @author 
- * daniel 
+ * @author daniel 
  * github:Daniel-Dos 
  * daniel.dias.analistati@gmail.com
  * twitter:@danieldiasjava

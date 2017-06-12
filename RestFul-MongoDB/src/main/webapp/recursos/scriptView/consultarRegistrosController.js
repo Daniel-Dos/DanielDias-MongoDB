@@ -47,4 +47,4 @@ consultarRegistrosControllerApp.controller("consultarRegistrosController",functi
 			 });
 		 }
 	 }
-});s
+});

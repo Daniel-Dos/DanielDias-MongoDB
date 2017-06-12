@@ -42,6 +42,8 @@ import br.com.danieldias.restful.servicos.PessoaServico;
  * twitter:@danieldiasjava
  */
 @Path("/pessoa")
+@Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
 public class PessoaController {
 
 	@Inject
@@ -51,8 +53,6 @@ public class PessoaController {
 	Logger logger;
 
 	@POST
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/cadastrar")
 	public Response cadastrarPessoa(Pessoa pessoa) {
 		pessoaServico.inserirPessoa(pessoa);
@@ -61,14 +61,12 @@ public class PessoaController {
 	}
 
 	@GET
-	@Produces(MediaType.APPLICATION_JSON)
 	public List<Pessoa> getPessoas() {
 		logger.info("Listando as Pessoas.");
 		return pessoaServico.listarPessoas();
 	}
 
 	@DELETE
-	@Produces(MediaType.APPLICATION_JSON)
 	@Path("deletar/{codigo}")
 	public Response removerPessoa(@PathParam("codigo") ObjectId codigo) {
 		pessoaServico.excluirPessoa(codigo);

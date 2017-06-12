@@ -112,11 +112,6 @@
 							<input type="button" class="btn btn-success" value="Salvar"
 								ng-click="salvarUsuario()" />
 						</p>
-
-						<hr />
-
-						<a href= "../jsp/consultarRegistros.jsp" class="btn btn-primary">Voltar</a>
-
 					</form>
 				</div>
 			</div>
