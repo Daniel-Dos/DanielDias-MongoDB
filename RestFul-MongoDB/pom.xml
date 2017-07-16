@@ -25,4 +25,7 @@
 	</parent>
 	<artifactId>RestFul-MongoDB</artifactId>
 	<packaging>war</packaging>
+	<build>
+    <finalName>RestFul-MongoDB</finalName>
+  </build>
 </project>
